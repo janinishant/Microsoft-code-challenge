@@ -10,7 +10,7 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#fr-navbar" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">FaceRec</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -20,12 +20,12 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="fr-navbar">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="register.html">Register your face</a></li>
+                    <li class="active"><a href="register.html">Register your face</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -34,28 +34,30 @@
 
 <div class="container">
     <div class="row">
-        <form id="recognize_form">
-            <h2>Recognize a photo</h2>
+        <form id="register_form">
+            <h2>Register your face</h2>
             <div class="form-group">
                 <label for="photo_url">URL to image</label>
                 <input type="url" class="form-control" name="url" id="photo_url" required>
                 <p class="help-block">Make sure the photo is clean and the face is recognizable</p>
             </div>
+            <div class="form-group">
+                <label for="username">What's your name?</label>
+                <input type="text" class="form-control" id="username" placeholder="enter your name" required>
+            </div>
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
-    <div class="row">
+    <div class="row" id="user_images">
         <div class="col-sm-3">
             <img id="img" src="" width="300" class="hidden">
-        </div>
-        <div class="col-sm-9">
-
         </div>
     </div>
 </div>
 
 <script type="application/javascript" src="js/jquery-2.1.4.min.js"></script>
 <script type="application/javascript" src="js/bootstrap.min.js"></script>
-<script type="application/javascript" src="js/recognize.js"></script>
+<script type="application/javascript" src="js/register.js"></script>
+
 </body>
 </html>
