@@ -5,5 +5,7 @@
 .idea
 *.iml
 out
+/node_modules
 gen
 # Created by .ignore support plugin (hsz.mobi)
+npm-debug.log

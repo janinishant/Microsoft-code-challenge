@@ -31,6 +31,26 @@ $("#photo_url")
 $("#recognize_form").on('submit', function(e) {
     e.preventDefault();
 
+    $("#username").addClass("hidden");
 
+    $.ajax({
+        method: "POST",
+        url: "/api/v1/identify-profile",
+        dataType: "json",
+        data: JSON.stringify({
+            url: $("#url").val()
+        }),
+        contentType: "application/json",
+        success: function(response, status, req) {
+            $("#username")
+                .html('<div class="alert alert-info" role="alert">Hello man!</div>')
+                .removeClass("hidden");
+        },
+        error: function(req, status, error) {
+            $("#username")
+                .html('<div class="alert alert-danger" role="alert">There was an error. Try again!</div>')
+                .removeClass("hidden");
+        }
+    })
 
 });
