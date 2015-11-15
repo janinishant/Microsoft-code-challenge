@@ -43,7 +43,7 @@ $("#recognize_form").on('submit', function(e) {
         contentType: "application/json",
         success: function(response, status, req) {
             $("#username")
-                .html('<div class="alert alert-info" role="alert">Hello man!</div>')
+                .html('<div class="alert alert-info" role="alert">Hello '+response.name+'!</div>')
                 .removeClass("hidden");
         },
         error: function(req, status, error) {
